@@ -1,5 +1,10 @@
 # UnmangleFacebookURL
 
+## Requirements
+Python version 3.9+. It might work with earlier versions, however I didn't check.
+
+## Description
+
 A small program for decrypting (unmangling) links shared on Facebook. It's simple to use. Open a terminal (or command line), enter the desired URL when prompted, copy the result.
 
 A mangled URL generally has the following form:
