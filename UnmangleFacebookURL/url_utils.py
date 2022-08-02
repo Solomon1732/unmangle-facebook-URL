@@ -1,8 +1,6 @@
 #!/bin/usr/env python3
 import urllib.parse
-from typing import Dict
 from typing import Final
-from typing import List
 from urllib.parse import SplitResult
 
 import exceptions
