@@ -10,7 +10,7 @@ _URL_QUERY_PARAM: Final[str] = "u"
 _FACEBOOK_TRACKER_PARAM: Final[str] = "fbclid"
 
 
-def parse_query(url: SplitResult) -> Dict[str, str]:
+def parse_query(url: SplitResult) -> Dict[str, List[str]]:
     """Extract the query parameter from a URL."""
 
     url_query: str = url.query
@@ -32,7 +32,7 @@ def extract_url(raw_url: str) -> str:
     """
 
     url: SplitResult = urllib.parse.urlsplit(raw_url)
-    url_query: Dict[str, str] = parse_query(url=url)
+    url_query: Dict[str, List[str]] = parse_query(url=url)
     query_param_list: List[str] = url_query[_URL_QUERY_PARAM]
 
     return query_param_list[0]
@@ -42,7 +42,7 @@ def clean_url(dirty_url: str) -> str:
     """Clean URL from Facebook URL parameter."""
 
     url_tuple: SplitResult = urllib.parse.urlsplit(dirty_url)
-    url_query: Dict[str, str] = parse_query(url=url_tuple)
+    url_query: Dict[str, List[str]] = parse_query(url=url_tuple)
     url_query.pop(_FACEBOOK_TRACKER_PARAM, None)
     new_encoded_query: Dict[str, str] = urllib.parse.urlencode(query=url_query)
     new_url: SplitResult = url_tuple._replace(query=new_encoded_query)
