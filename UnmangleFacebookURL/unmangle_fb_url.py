@@ -81,8 +81,8 @@ def print_func(is_quiet: bool = False):
     """Returns a print function.
 
     The returned function's behavior differs between quiet mode and interactive mode.
-    In quite mode the message it prints the message as-is. In interactive mode it print
-    a blank line before and after the message.
+    In quite mode it prints the message as-is. In interactive mode it print a blank
+    line before and after the message.
     """
 
     def quiet_print(*args, **kwargs) -> None:
