@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-
-
 import enum
 import sys
+from collections.abc import Callable
 from enum import Enum
-from typing import Callable, NamedTuple
+from typing import NamedTuple
 
 
 class _ModeData(NamedTuple):
