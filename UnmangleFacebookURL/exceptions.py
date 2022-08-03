@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
-
 from typing import Final
-from urllib.parse import SplitResult
 
 
 class QueryStringParsingError(ValueError):
     """Exception class for an error during parsing a URL's string query."""
 
-    def __init__(self, *args: object, url: SplitResult, url_query: str) -> None:
+    def __init__(self, *args: object, url: str, url_query: str) -> None:
         super().__init__(*args)
-        self._url: Final[SplitResult] = url
+        self._url: Final[str] = url
         self._url_query: Final[str] = url_query
 
     @property
@@ -17,7 +15,7 @@ class QueryStringParsingError(ValueError):
         return self._url_query
 
     @property
-    def url(self) -> SplitResult:
+    def url(self) -> str:
         return self._url
 
 
