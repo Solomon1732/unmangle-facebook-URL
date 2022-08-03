@@ -43,7 +43,7 @@ def clean_url(dirty_url: str) -> str:
     url_tuple: SplitResult = urllib.parse.urlsplit(dirty_url)
     url_query: dict[str, list[str]] = parse_query(url=url_tuple)
     url_query.pop(_FACEBOOK_TRACKER_PARAM, None)
-    new_encoded_query: dict[str, str] = urllib.parse.urlencode(query=url_query)
+    new_encoded_query: str = urllib.parse.urlencode(query=url_query)
     new_url: SplitResult = url_tuple._replace(query=new_encoded_query)
 
     return urllib.parse.urlunsplit(new_url)
