@@ -1,4 +1,7 @@
 #!/bin/usr/env python3
+"""
+Various utilities for the program to use.
+"""
 import urllib.parse
 from typing import Final
 from urllib.parse import SplitResult

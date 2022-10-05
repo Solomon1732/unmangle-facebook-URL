@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+Holds the project's exception.
+"""
 from typing import Final
 
 
@@ -12,10 +15,12 @@ class QueryStringParsingError(ValueError):
 
     @property
     def url_query(self) -> str:
+        """Return the badly-parsed query."""
         return self._url_query
 
     @property
     def url(self) -> str:
+        """Returns the badly-parsed URL."""
         return self._url
 
 

@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+The program modes: "quiet", "interactive", and so on.
+"""
 import enum
 import sys
 from collections.abc import Callable

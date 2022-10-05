@@ -12,6 +12,7 @@
     <OutputPath>.</OutputPath>
     <Name>UnmangleFacebookURL</Name>
     <RootNamespace>UnmangleFacebookURL</RootNamespace>
+    <InterpreterId>MSBuild|fburl|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,6 +27,17 @@
     <Compile Include="program_modes.py" />
     <Compile Include="unmangle_fb_url.py" />
     <Compile Include="url_utils.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="fburl\">
+      <Id>fburl</Id>
+      <Version>3.10</Version>
+      <Description>fburl (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
