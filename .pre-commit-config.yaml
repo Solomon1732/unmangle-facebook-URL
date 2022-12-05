@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v3.2.2
+    rev: v3.3.0
     hooks:
     -   id: pyupgrade
         args: [--py310-plus]
@@ -33,6 +33,6 @@ repos:
         args: [--no-strict-optional, --ignore-missing-imports]
         additional_dependencies: [tokenize-rt==3.2.0]
 -   repo: https://github.com/PyCQA/pylint
-    rev: v2.15.6
+    rev: v2.15.8
     hooks:
     -   id: pylint
