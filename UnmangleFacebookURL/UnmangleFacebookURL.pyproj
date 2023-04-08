@@ -13,6 +13,7 @@
     <Name>UnmangleFacebookURL</Name>
     <RootNamespace>UnmangleFacebookURL</RootNamespace>
     <InterpreterId>MSBuild|fburl|$(MSBuildProjectFullPath)</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
