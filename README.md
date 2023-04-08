@@ -2,7 +2,7 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/Solomon1732/unmangle-facebook-URL/master.svg)](https://results.pre-commit.ci/latest/github/Solomon1732/unmangle-facebook-URL/master)
 
 ## Requirements
-Python version 3.10+. It might work with earlier versions, however I didn't check.
+Python version 3.11+. It might work with earlier versions, however I didn't check.
 
 ## Description
 
